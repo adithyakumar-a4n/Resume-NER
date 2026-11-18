@@ -1,0 +1,4 @@
+Model,Accuracy,Precision (SKILL),Recall (SKILL),F1 (SKILL)
+Rule-Based,0.828,0.846,0.786,0.815
+ML-Based,0.759,0.769,0.714,0.741
+Hybrid,0.793,0.722,0.929,0.812

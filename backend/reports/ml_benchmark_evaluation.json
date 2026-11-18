@@ -1,0 +1,96 @@
+{
+  "report_name": "ML Skill Phrase Classifier Benchmark Evaluation",
+  "generated_at": "2026-10-22",
+  "dataset_name": "skill_phrase_benchmark.csv",
+  "total_examples": 115,
+  "class_distribution": {
+    "SKILL": 55,
+    "OTHER": 60
+  },
+  "train_examples": 86,
+  "test_examples": 29,
+  "split_strategy": "stratified train_test_split",
+  "test_size_fraction": 0.25,
+  "random_state": 42,
+  "accuracy": 0.7586206896551724,
+  "macro_f1": 0.7575,
+  "classification_report": {
+    "OTHER": {
+      "precision": 0.75,
+      "recall": 0.8,
+      "f1-score": 0.77,
+      "support": 15
+    },
+    "SKILL": {
+      "precision": 0.7692,
+      "recall": 0.7143,
+      "f1-score": 0.7407,
+      "support": 14
+    },
+    "accuracy": 0.7586,
+    "macro avg": {
+      "precision": 0.76,
+      "recall": 0.76,
+      "f1-score": 0.7575,
+      "support": 29
+    },
+    "weighted avg": {
+      "precision": 0.76,
+      "recall": 0.76,
+      "f1-score": 0.76,
+      "support": 29
+    }
+  },
+  "confusion_matrix": [
+    [
+      12,
+      3
+    ],
+    [
+      4,
+      10
+    ]
+  ],
+  "misclassified_examples": [
+    {
+      "phrase": "Used PowerPoint to present research findings",
+      "actual": "OTHER",
+      "predicted": "SKILL"
+    },
+    {
+      "phrase": "Managed project tasks and milestones",
+      "actual": "SKILL",
+      "predicted": "OTHER"
+    },
+    {
+      "phrase": "Resume includes education and contact information",
+      "actual": "OTHER",
+      "predicted": "SKILL"
+    },
+    {
+      "phrase": "Developed REST APIs with FastAPI",
+      "actual": "SKILL",
+      "predicted": "OTHER"
+    },
+    {
+      "phrase": "Collaborated through pull requests on GitHub",
+      "actual": "SKILL",
+      "predicted": "OTHER"
+    },
+    {
+      "phrase": "Has not built a web application",
+      "actual": "OTHER",
+      "predicted": "SKILL"
+    },
+    {
+      "phrase": "Handled JSON payloads in an API request",
+      "actual": "SKILL",
+      "predicted": "OTHER"
+    }
+  ],
+  "limitations": [
+    "The benchmark is small (115 labeled phrases) and the held-out test set contains only 29 examples.",
+    "This evaluates phrase classification, not end-to-end resume skill extraction or named-entity recognition.",
+    "These results do not establish performance on unseen real-world resumes; further evaluation on a larger, independently labeled dataset is required."
+  ]
+}

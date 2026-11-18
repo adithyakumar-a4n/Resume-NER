@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Frontend
+node_modules/
+dist/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Local databases, Chroma indexes, uploads and generated runtime data
+backend/data/*
+!backend/data/.gitkeep
+!backend/data/skill_phrase_benchmark.csv
+backend/models/*.joblib
+!backend/models/skill_phrase_model.joblib
+backend/models/*.json
+backend/reports/*misclassifications*.csv
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Additional publication safeguards
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.pem
+*.key
+*.p12
+.env.local
+.env.production
+uploads/
+dist/
